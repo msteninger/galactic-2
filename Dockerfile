@@ -4,6 +4,7 @@ WORKDIR /var/www/app
 
 RUN apk update && apk add \
     curl \
+    git \
     libpng-dev \
     libxml2-dev \
     zip \
