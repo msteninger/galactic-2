@@ -39,7 +39,7 @@
         mounted() {
             this.fetchNews(this.page);
         }
-    
+
     };
 </script>
 
@@ -48,6 +48,9 @@
         <div v-if="apiData">
             <ul>
                 <li v-for="item in apiData">
+                    <h2>{{ item.headline }}</h2>
+                    <h3>{{  item.byline }}</h3>
+                    <date>{{ item.date }}</date>
                     <div v-html="markdownToHTML(item.content)"></div>
                 </li>
             </ul>
